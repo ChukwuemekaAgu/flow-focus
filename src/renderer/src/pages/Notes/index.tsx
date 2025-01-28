@@ -13,12 +13,12 @@ export const SignUp: React.FC = () => {
       alert('Please enter both username and password.');
       return;
     }
-    navigate(FaceRegisterPage.path, { state: { username, password } });
+    // navigate(FaceRegisterPage.path, { state: { username, password } });
   };
 
   const signInPage = () => {
 
-    navigate(SignInPage.path);
+    // navigate(SignInPage.path);
   };
 
   return (
