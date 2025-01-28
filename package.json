@@ -1,15 +1,32 @@
 {
   "name": "flow-focus",
-  "productName": "flow-focus",
+  "productName": "Personal Productivity App",
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": ".vite/build/main.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
+    "dev": "vite",
+    "build": "vite build",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts,.tsx ."
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "path/to/icon"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "flow_focus"
+          }
+        }
+      ]
+    }
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.6.1",
@@ -21,6 +38,8 @@
     "@electron-forge/plugin-fuses": "^7.6.1",
     "@electron-forge/plugin-vite": "^7.6.1",
     "@electron/fuses": "^1.8.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "electron": "34.0.1",
@@ -37,6 +56,10 @@
   },
   "license": "MIT",
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.1"
+    "electron-app": "^1.0.0",
+    "electron-squirrel-startup": "^1.0.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.3"
   }
 }
